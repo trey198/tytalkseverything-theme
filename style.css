@@ -1,0 +1,107 @@
+/*
+Theme Name: Ty Talks Everything Theme
+Author: Trevor Moyo
+Version: 1.0
+Description: Custom Bootstrap theme for Ty Talks Everything website
+*/
+
+/* General Reset & Typography */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  color: #212529;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+  padding: 5rem 0;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.hero p.lead {
+  font-size: 1.25rem;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}
+footer a {
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #ffc107; /* gold hover accent */
+}
+
+/* Connect Section Background */
+.connect-section {
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+/* Contact Card Styles */
+.contact-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  opacity: 0;                   /* start invisible */
+  transform: translateY(20px) scale(0.95); /* start lower + slightly smaller */
+  animation: fadeInUpScale 0.8s ease forwards;
+}
+.contact-card:nth-child(1) { animation-delay: 0.2s; }
+.contact-card:nth-child(2) { animation-delay: 0.4s; }
+.contact-card:nth-child(3) { animation-delay: 0.6s; }
+.contact-card:nth-child(4) { animation-delay: 0.8s; }
+
+.contact-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.contact-card i {
+  transition: color 0.3s ease;
+}
+.contact-card:hover i {
+  color: #dc3545; /* highlight icon on hover */
+}
+
+/* Fade-in with Scale Animation */
+@keyframes fadeInUpScale {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Contact Form */
+form .form-control {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+}
+form .btn-danger {
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Back to Top Button */
+.btn-light.btn-sm {
+  border-radius: 50%;
+  padding: 0.5rem 0.6rem;
+}
